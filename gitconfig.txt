@@ -1,0 +1,25 @@
+[user]
+    name = Ben Spoon
+    email = ben@benspoon.com
+[alias]
+    co = checkout
+    cp = cherry-pick
+    ci = commit
+    st = status
+    br = branch
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    type = cat-file -t
+    dump = cat-file -p
+    l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    po = push origin
+    prp = "!f() { git whatchanged origin/master..HEAD; }; f"
+    forcepull = "!git fetch ; git reset --hard @{u}"
+    poh= = push origin head
+[merge]
+    tool = opendiff
+[color]
+    ui = 1
+[filter "lfs"]
+    clean = git-lfs clean %f
+    smudge = git-lfs smudge %f
+    required = true
